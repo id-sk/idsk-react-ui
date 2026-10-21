@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { LanguagePicker } from '@idsk/core';
+import { LanguagePicker } from '@id-sk/react';
 
 const LANGUAGES = [
   { value: 'sk', label: 'Slovenčina' },

@@ -1,4 +1,4 @@
-import { Input, Radio, RadioGroup, Select, Tooltip } from '@idsk/core';
+import { Input, Radio, RadioGroup, Select, Tooltip } from '@id-sk/react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {

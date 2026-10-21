@@ -1,4 +1,4 @@
-import { type StepItem, Stepper, type StepperProps } from '@idsk/core';
+import { type StepItem, Stepper, type StepperProps } from '@id-sk/react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
 

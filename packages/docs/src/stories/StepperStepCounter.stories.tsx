@@ -1,4 +1,4 @@
-import { StepperStepCounter, type StepperStepCounterProps } from '@idsk/core';
+import { StepperStepCounter, type StepperStepCounterProps } from '@id-sk/react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {

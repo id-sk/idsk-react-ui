@@ -107,7 +107,7 @@ Pri aktualizácii stačí zopakovať `git pull` → `npm ci` → `build:prod` �
 
 ### Použitie knižnice v inej aplikácii
 
-`@idsk/core` sa nepublikuje do npm registra. Do cieľovej aplikácie ho dostanete cez tarball:
+`@id-sk/react` sa nepublikuje do npm registra. Do cieľovej aplikácie ho dostanete cez tarball:
 
 ```bash
 cd packages/core && npm pack          # vytvorí idsk-core-<verzia>.tgz
@@ -117,8 +117,8 @@ cd /cesta/k/aplikacii && npm install /cesta/k/idsk-core-<verzia>.tgz
 Tarball musíte vytvárať až **po** `build:prod` — obsahuje `dist/`, ktorý sa nikam necommituje. Balík zatiaľ nemá pole
 `files`, takže so sebou nesie aj zdrojáky a fonty (~32 MB rozbalene); na funkčnosť to vplyv nemá.
 
-V aplikácii potom naimportujte štýly (`@idsk/core/style.css`) a komponenty z `@idsk/core`, prípadne vanilla build z
-`@idsk/core/vanilla`.
+V aplikácii potom naimportujte štýly (`@id-sk/react/style.css`) a komponenty z `@id-sk/react`, prípadne vanilla build z
+`@id-sk/react/vanilla`.
 
 ### Čomu sa na serveri vyhnúť
 
@@ -134,7 +134,7 @@ V aplikácii potom naimportujte štýly (`@idsk/core/style.css`) a komponenty z 
 | Hláška                                                      | Príčina                                                                                      |
 | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | `EUNSUPPORTEDPROTOCOL: Unsupported URL Type "workspace:"`   | Server má staršiu verziu repa. Stiahnite aktuálny `main`.                                    |
-| `ERR_PNPM_FETCH_404: @idsk/core is not in the npm registry` | V `pnpm-workspace.yaml` chýba `linkWorkspacePackages: true`.                                 |
+| `ERR_PNPM_FETCH_404: @id-sk/react is not in the npm registry` | V `pnpm-workspace.yaml` chýba `linkWorkspacePackages: true`.                                 |
 | `Could not resolve 'vite'`                                  | Rozbitý `node_modules` po prerušenej alebo zmiešanej inštalácii. Zmažte ho a dajte `npm ci`. |
 | `Command failed with exit code 254 … pnpm.mjs install`      | Spustený koreňový `build` cez Turborepo. Použite `build:prod`.                               |
 | `Unknown project config "only-built-dependencies"`          | Neškodné varovanie — je to nastavenie pre pnpm v `.npmrc`, npm ho ignoruje.                  |
@@ -145,14 +145,14 @@ Tieto príkazy môžete spúšťať z koreňového adresára:
 
 ### Vývoj a zostavenie
 
-- `pnpm dev`: Spustí Vite dev server pre `@idsk/core`.
+- `pnpm dev`: Spustí Vite dev server pre `@id-sk/react`.
 - `pnpm dev:docs`: Spustí Storybook dokumentáciu na `http://localhost:6006` (alias: `pnpm storybook`).
 - `pnpm build`: Spustí lint, typecheck a zostaví všetky balíky cez Turborepo.
 
 ### Testovanie a kvalita
 
 - `pnpm test`: Spustí Vitest unit testy aj Playwright CT testy (všetky balíky).
-- `pnpm test-ct`: Spustí Playwright component testy iba pre `@idsk/core`.
+- `pnpm test-ct`: Spustí Playwright component testy iba pre `@id-sk/react`.
 - `pnpm lint`: Skontroluje kód pomocou ESLint.
 - `pnpm lint:style`: Skontroluje CSS súbory pomocou Stylelint.
 - `pnpm lint:fix`: Automaticky opraví chyby v kóde pomocou ESLint.

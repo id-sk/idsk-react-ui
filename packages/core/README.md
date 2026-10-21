@@ -1,4 +1,4 @@
-# @idsk/core
+# @id-sk/react
 
 Hlavná knižnica UI komponentov pre digitálne služby štátu (IDSK). Poskytuje sadu znovupoužiteľných a prístupných React
 komponentov založených na IDSK dizajnovom systéme.
@@ -14,9 +14,9 @@ komponentov založených na IDSK dizajnovom systéme.
 ## 📦 Inštalácia
 
 ```bash
-pnpm add @idsk/core
+pnpm add @id-sk/react
 # alebo
-npm install @idsk/core
+npm install @id-sk/react
 ```
 
 ## 🎨 Použitie CSS
@@ -28,7 +28,7 @@ Knižnica vyžaduje import CSS štýlov pre správne zobrazenie komponentov. Má
 Vložte nasledujúci import do vášho hlavného vstupného súboru (napr. `main.tsx` alebo `App.tsx`):
 
 ```typescript
-import '@idsk/core/style.css';
+import '@id-sk/react/style.css';
 ```
 
 ### 2. Integrácia s Tailwind CSS v4 (Odporúčané)
@@ -39,7 +39,7 @@ hlavného CSS súboru. Týmto sprístupníte všetky IDSK utility bez duplikovan
 ```css
 @import 'tailwindcss';
 
-@reference "@idsk/core";
+@reference "@id-sk/react";
 ```
 
 ### Konflikty s vlastnými štýlmi
@@ -77,10 +77,10 @@ automaticky po načítaní stránky.
 
 ```html
 <!-- 1. Import štýlov -->
-<link rel="stylesheet" href="node_modules/@idsk/core/dist/style.css" />
+<link rel="stylesheet" href="node_modules/@id-sk/react/dist/style.css" />
 
 <!-- 2. Import vanilla ES modulu -->
-<script type="module" src="node_modules/@idsk/core/dist/vanilla.es.js"></script>
+<script type="module" src="node_modules/@id-sk/react/dist/vanilla.es.js"></script>
 ```
 
 ## 🛠️ Vývoj a skripty

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { AccordionList } from '@idsk/core';
+import { AccordionList } from '@id-sk/react';
 
 const meta = {
   title: 'Organisms/AccordionList',

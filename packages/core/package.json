@@ -1,8 +1,13 @@
 {
-  "name": "@idsk/core",
+  "name": "@id-sk/react",
   "version": "3.2.0",
-  "description": "IDSK React komponenty (core)",
+  "description": "React komponenty dizajnového systému IDSK 3 pre elektronické služby a webové sídla verejnej správy",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/id-sk/idsk-react-ui.git",
+    "directory": "packages/core"
+  },
   "type": "module",
   "main": "./dist/index.es.js",
   "module": "./dist/index.es.js",

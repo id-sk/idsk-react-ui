@@ -11,13 +11,13 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "turbo run dev --filter=@idsk/core",
+    "dev": "turbo run dev --filter=@id-sk/react",
     "dev:docs": "turbo run storybook --filter=@idsk/docs",
     "build": "turbo run lint lint:style typecheck format:check && turbo run build",
     "build:prod": "cd packages/core && npm run build && cd ../docs && npm run build",
     "storybook": "turbo run storybook --filter=@idsk/docs",
     "test": "turbo run test test-ct",
-    "test-ct": "turbo run test-ct --filter=@idsk/core",
+    "test-ct": "turbo run test-ct --filter=@id-sk/react",
     "check": "turbo run lint lint:style typecheck format:check",
     "lint": "eslint .",
     "lint:style": "stylelint \"**/*.css\"",

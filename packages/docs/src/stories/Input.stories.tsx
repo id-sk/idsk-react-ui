@@ -1,4 +1,4 @@
-import { Input } from '@idsk/core';
+import { Input } from '@id-sk/react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {

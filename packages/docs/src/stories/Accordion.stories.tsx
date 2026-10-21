@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Accordion } from '@idsk/core';
-import { initIDSK } from '@idsk/core/vanilla';
+import { Accordion } from '@id-sk/react';
+import { initIDSK } from '@id-sk/react/vanilla';
 
 const meta: Meta<typeof Accordion> = {
   title: 'Molecules/Accordion',

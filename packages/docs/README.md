@@ -24,7 +24,7 @@ Tieto príkazy spúšťajte z koreňa monorepa:
 
 ## 📖 Práca s komponentmi
 
-Každý komponent v `@idsk/core` by mal mať svoj zodpovedajúci súbor v tomto balíku (napr. `Button.stories.tsx`), ktorý demonštruje:
+Každý komponent v `@id-sk/react` by mal mať svoj zodpovedajúci súbor v tomto balíku (napr. `Button.stories.tsx`), ktorý demonštruje:
 
 - Rôzne stavy komponentu (Primary, Secondary, Disabled, atď.).
 - Varianty veľkostí a farieb.
@@ -33,4 +33,4 @@ Každý komponent v `@idsk/core` by mal mať svoj zodpovedajúci súbor v tomto 
 
 ## 🔗 Prepojenie s Core
 
-Tento balík závisí priamo od `@idsk/core`. Pri vývoji nových komponentov v core balíku sa zmeny automaticky prejavia v Storybooku vďaka Vite HMR (Hot Module Replacement).
+Tento balík závisí priamo od `@id-sk/react`. Pri vývoji nových komponentov v core balíku sa zmeny automaticky prejavia v Storybooku vďaka Vite HMR (Hot Module Replacement).

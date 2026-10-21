@@ -183,7 +183,7 @@ importers:
 
   packages/docs:
     dependencies:
-      '@idsk/core':
+      '@id-sk/react':
         specifier: '*'
         version: link:../core
     devDependencies:
