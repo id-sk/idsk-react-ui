@@ -43,7 +43,7 @@ webserver (nginx, Apache, IIS). Node je potrebný len počas buildu.
 ### Požiadavky
 
 | Položka | Hodnota                                                   |
-|---------|-----------------------------------------------------------|
+| ------- | --------------------------------------------------------- |
 | Node.js | 24.x (podľa `.nvmrc`; vyžadujú ju Vite 8 aj Storybook 10) |
 | npm     | 11.x — je súčasťou Node 24, netreba inštalovať zvlášť     |
 | pnpm    | nepovinné; build ide aj bez neho                          |
@@ -67,7 +67,7 @@ zbytočným timeoutom.
 ### Výstupy
 
 | Adresár              | Obsah                                                                       |
-|----------------------|-----------------------------------------------------------------------------|
+| -------------------- | --------------------------------------------------------------------------- |
 | `packages/core/dist` | knižnica: `index.es.js`, `index.umd.js`, `vanilla.js`, `style.css`, `.d.ts` |
 | `packages/docs/dist` | statický Storybook (~18 MB) — toto sa nasadzuje na web                      |
 
@@ -123,7 +123,7 @@ V aplikácii potom naimportujte štýly (`@idsk/core/style.css`) a komponenty z 
 ### Čomu sa na serveri vyhnúť
 
 | Príkaz                     | Prečo nie                                                                                                                      |
-|----------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | `npm run build` (v koreni) | Spustí Turborepo, ktoré podľa poľa `packageManager` volá pnpm, a pred buildom ešte `format:check` — na serveri padne zbytočne. |
 | `npm run storybook`        | Vývojový server s HMR na porte 6006, nie produkčné riešenie.                                                                   |
 | `npm test`                 | Playwright sťahuje Chromium, Firefox aj WebKit (stovky MB). Testy patria do CI.                                                |
@@ -132,7 +132,7 @@ V aplikácii potom naimportujte štýly (`@idsk/core/style.css`) a komponenty z 
 ### Riešenie problémov
 
 | Hláška                                                      | Príčina                                                                                      |
-|-------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| ----------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | `EUNSUPPORTEDPROTOCOL: Unsupported URL Type "workspace:"`   | Server má staršiu verziu repa. Stiahnite aktuálny `main`.                                    |
 | `ERR_PNPM_FETCH_404: @idsk/core is not in the npm registry` | V `pnpm-workspace.yaml` chýba `linkWorkspacePackages: true`.                                 |
 | `Could not resolve 'vite'`                                  | Rozbitý `node_modules` po prerušenej alebo zmiešanej inštalácii. Zmažte ho a dajte `npm ci`. |

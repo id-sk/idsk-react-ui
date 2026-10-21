@@ -14,12 +14,17 @@ export default defineConfig(({ mode }) => {
       react(),
       tailwindcss(),
       !isVanilla && cssInjectedByJsPlugin(),
-      dts({
-        insertTypesEntry: true,
-        rollupTypes: true,
-        tsconfigPath: './tsconfig.json',
-        exclude: ['**/*.test.tsx', '**/*.test.ts', '**/*.stories.tsx', '**/playwright/**'],
-      }),
+      !isVanilla &&
+        dts({
+          tsconfigPath: './tsconfig.json',
+          entryRoot: 'src',
+          exclude: [
+            '**/*.test.tsx',
+            '**/*.test.ts',
+            '**/*.stories.tsx',
+            '**/playwright/**',
+          ],
+        }),
     ],
     test: {
       globals: true,
