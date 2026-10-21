@@ -1,10 +1,27 @@
 /// <reference types="vitest" />
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import * as path from 'path';
 import { defineConfig } from 'vite';
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 import dts from 'vite-plugin-dts';
+
+// Next.js App Router vyžaduje 'use client' ako úplne prvý riadok bundlu.
+// Pridáva sa až po zápise súborov, aby ho nič (napr. vkladanie CSS) neodsunulo.
+const useClientDirective = () => ({
+  name: 'use-client-directive',
+  closeBundle() {
+    for (const file of ['dist/index.es.js', 'dist/index.umd.js']) {
+      const filePath = path.resolve(__dirname, file);
+      if (!existsSync(filePath)) continue;
+      const code = readFileSync(filePath, 'utf8');
+      if (!code.startsWith("'use client'")) {
+        writeFileSync(filePath, `'use client';\n${code}`);
+      }
+    }
+  },
+});
 
 export default defineConfig(({ mode }) => {
   const isVanilla = mode === 'vanilla';
@@ -14,6 +31,7 @@ export default defineConfig(({ mode }) => {
       react(),
       tailwindcss(),
       !isVanilla && cssInjectedByJsPlugin(),
+      !isVanilla && useClientDirective(),
       !isVanilla &&
         dts({
           tsconfigPath: './tsconfig.json',
