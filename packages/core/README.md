@@ -42,6 +42,34 @@ hlavného CSS súboru. Týmto sprístupníte všetky IDSK utility bez duplikovan
 @reference "@idsk/core";
 ```
 
+### Konflikty s vlastnými štýlmi
+
+Štýly knižnice sú v CSS vrstvách (`@layer`). Podľa pravidiel CSS majú štýly, ktoré nie sú v žiadnej vrstve, vždy prednosť pred štýlmi vo vrstvách – bez ohľadu na špecifickosť aj poradie načítania.
+
+Ak má váš projekt globálny reset mimo vrstvy (napríklad predvolený `globals.css` v Next.js), prebije štýly komponentov – typicky vynuluje ich vnútorné odsadenie:
+
+```css
+/* ❌ mimo vrstvy – prebije štýly knižnice */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+```
+
+Vlastné resety a základné štýly preto vložte do vrstvy `base`:
+
+```css
+/* ✅ vo vrstve – štýly knižnice majú prednosť */
+@layer base {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+}
+```
+
 ## 🍦 Vanilla JS verzia
 
 Knižnica obsahuje aj vanilla verziu, ktorú je možné použiť v projektoch bez Reactu. Komponenty sa inicializujú
