@@ -1,4 +1,4 @@
-import { Textarea } from '@idsk/core';
+import { Textarea } from '@id-sk/react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {

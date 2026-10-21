@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Header, HeaderMainSection, HeaderMenuItem, TopBar, WebsiteNavigation } from '@idsk/core';
+import { Header, HeaderMainSection, HeaderMenuItem, TopBar, WebsiteNavigation } from '@id-sk/react';
 
 const meta = {
   title: 'Molecules/HeaderMenuItem',

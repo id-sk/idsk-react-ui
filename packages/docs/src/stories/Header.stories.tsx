@@ -11,7 +11,7 @@ import {
   NotificationsIcon,
   TopBar,
   WebsiteNavigation,
-} from '@idsk/core';
+} from '@id-sk/react';
 
 const DROPDOWN_ITEMS = [
   { label: 'Položka 1', href: '#' },

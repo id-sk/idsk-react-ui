@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { TopBar } from '@idsk/core';
+import { TopBar } from '@id-sk/react';
 
 const LANGUAGES = [
   { value: 'sk', label: 'Slovenčina' },

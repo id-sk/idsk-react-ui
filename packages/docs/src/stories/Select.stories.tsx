@@ -1,4 +1,4 @@
-import { Select } from '@idsk/core';
+import { Select } from '@id-sk/react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState, type ComponentProps } from 'react';
 

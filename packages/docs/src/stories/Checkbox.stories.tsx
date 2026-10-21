@@ -1,4 +1,4 @@
-import { Checkbox, CheckboxGroup } from '@idsk/core';
+import { Checkbox, CheckboxGroup } from '@id-sk/react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import React from 'react';
 

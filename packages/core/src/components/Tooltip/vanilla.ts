@@ -17,8 +17,8 @@
  *   </div>
  *
  * Usage:
- *   import { initAll } from '@idsk/core/vanilla';
- *   initAll();
+ *   import { initIDSK } from '@id-sk/react/vanilla';
+ *   initIDSK();
  */
 
 const ARROW_SVG = `<svg class="idsk-tooltip__arrow" width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M14.7223 16.5C13.5676 18.5 10.6808 18.5 9.5261 16.5L-0.000174975 -5.78326e-07L24.2485 0L14.7223 16.5Z" fill="currentColor"/></svg>`;

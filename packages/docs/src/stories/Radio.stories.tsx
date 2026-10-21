@@ -1,4 +1,4 @@
-import { Radio, RadioGroup } from '@idsk/core';
+import { Radio, RadioGroup } from '@id-sk/react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {

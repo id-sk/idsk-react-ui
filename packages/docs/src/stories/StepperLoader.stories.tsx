@@ -1,4 +1,4 @@
-import { StepperLoader, type StepperLoaderProps } from '@idsk/core';
+import { StepperLoader, type StepperLoaderProps } from '@id-sk/react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {

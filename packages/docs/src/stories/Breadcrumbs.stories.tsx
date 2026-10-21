@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Breadcrumbs } from '@idsk/core';
+import { Breadcrumbs } from '@id-sk/react';
 
 const meta = {
   title: 'Molecules/Breadcrumbs',

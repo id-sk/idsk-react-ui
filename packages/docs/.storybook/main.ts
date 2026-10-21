@@ -58,12 +58,12 @@ const config: StorybookConfig = {
       ]),
     );
 
-    // Ensure Vite resolves @idsk/core to source during development
+    // Ensure Vite resolves @id-sk/react to source during development
     config.resolve = config.resolve || {};
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@idsk/core/vanilla': path.resolve(import.meta.dirname, '../../core/src/vanilla.ts'),
-      '@idsk/core': path.resolve(import.meta.dirname, '../../core/src/index.ts'),
+      '@id-sk/react/vanilla': path.resolve(import.meta.dirname, '../../core/src/vanilla.ts'),
+      '@id-sk/react': path.resolve(import.meta.dirname, '../../core/src/index.ts'),
       '@idsk/css': path.resolve(import.meta.dirname, '../../core/src/style/global.css'),
     };
 

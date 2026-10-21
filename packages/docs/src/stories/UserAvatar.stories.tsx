@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { UserAvatar } from '@idsk/core';
+import { UserAvatar } from '@id-sk/react';
 
 const meta = {
   title: 'Atoms/UserAvatar',

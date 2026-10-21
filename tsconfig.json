@@ -6,8 +6,8 @@
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
     "paths": {
-      "@idsk/core": ["./packages/core/src/index.ts"],
-      "@idsk/core/vanilla": ["./packages/core/src/vanilla.ts"],
+      "@id-sk/react": ["./packages/core/src/index.ts"],
+      "@id-sk/react/vanilla": ["./packages/core/src/vanilla.ts"],
       "@idsk/css": ["./packages/core/src/style/global.css"]
     },
 

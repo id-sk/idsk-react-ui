@@ -1,4 +1,4 @@
-import { Button, type ButtonProps } from '@idsk/core';
+import { Button, type ButtonProps } from '@id-sk/react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import React from 'react';
 

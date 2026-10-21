@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { NotificationButton } from '@idsk/core';
+import { NotificationButton } from '@id-sk/react';
 import MailIcon from '../../../core/src/assets/icons/MailIcon';
 import NotificationsIcon from '../../../core/src/assets/icons/NotificationsIcon';
 

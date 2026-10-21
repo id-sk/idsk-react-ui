@@ -1,4 +1,4 @@
-import { StepperItem, type StepperItemProps } from '@idsk/core';
+import { StepperItem, type StepperItemProps } from '@id-sk/react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
