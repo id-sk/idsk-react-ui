@@ -8,6 +8,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import { axe } from '../../test/axe';
 import { Stepper } from './Stepper';
+import { initAll } from './vanilla';
 
 const defaultSteps = [{ label: 'Osobné údaje' }, { label: 'Adresa' }, { label: 'Potvrdenie' }];
 
@@ -535,6 +536,13 @@ describe('Stepper', () => {
         </main>,
       );
       expect(await axe(container)).toHaveNoViolations();
+    });
+  });
+  describe('Vanilla initAll', () => {
+    it('sa nenaviaže na React Stepper', () => {
+      render(<Stepper steps={defaultSteps} activeStep={0} />);
+      initAll(document.body);
+      expect(screen.getByRole('navigation')).not.toHaveAttribute('data-stepper-init');
     });
   });
 });
