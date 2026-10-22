@@ -32,24 +32,37 @@
  *         <!-- Completed steps use <button class="idsk-stepper__step"> -->
  *         <li class="idsk-stepper__item idsk-stepper__item--completed">
  *           <button type="button" class="idsk-stepper__step">
- *             <span class="idsk-stepper__indicator" aria-hidden="true"><!-- check icon --></span>
+ *             <span class="idsk-stepper__indicator-col" aria-hidden="true">
+ *               <span class="idsk-stepper__line idsk-stepper__line--top"></span>
+ *               <span class="idsk-stepper__indicator"><!-- check icon --></span>
+ *               <span class="idsk-stepper__line idsk-stepper__line--bottom"></span>
+ *             </span>
  *             <span class="idsk-stepper__label">Krok 1</span>
  *           </button>
- *           <div class="idsk-stepper__connector" aria-hidden="true"></div>
  *         </li>
  *         <!-- Active and upcoming steps use <div class="idsk-stepper__step"> -->
  *         <li class="idsk-stepper__item idsk-stepper__item--active" aria-current="step">
  *           <div class="idsk-stepper__step">
- *             <span class="idsk-stepper__indicator" aria-hidden="true">
- *               <span class="idsk-stepper__number">2</span>
+ *             <span class="idsk-stepper__indicator-col" aria-hidden="true">
+ *               <span class="idsk-stepper__line idsk-stepper__line--top"></span>
+ *               <span class="idsk-stepper__indicator">
+ *                 <span class="idsk-stepper__number">2</span>
+ *               </span>
+ *               <span class="idsk-stepper__line idsk-stepper__line--bottom"></span>
  *             </span>
  *             <span class="idsk-stepper__label">Krok 2</span>
  *           </div>
- *           <div class="idsk-stepper__connector" aria-hidden="true"></div>
  *         </li>
  *         <!-- Summary item: add idsk-stepper__item--summary class -->
  *         <li class="idsk-stepper__item idsk-stepper__item--upcoming idsk-stepper__item--summary">
- *           ...
+ *           <div class="idsk-stepper__step">
+ *             <span class="idsk-stepper__indicator-col" aria-hidden="true">
+ *               <span class="idsk-stepper__line idsk-stepper__line--top"></span>
+ *               <span class="idsk-stepper__indicator"><!-- list icon --></span>
+ *               <span class="idsk-stepper__line idsk-stepper__line--bottom"></span>
+ *             </span>
+ *             <span class="idsk-stepper__label">Zhrnutie</span>
+ *           </div>
  *         </li>
  *       </ol>
  *     </div>
@@ -232,7 +245,7 @@ export function init(element: HTMLElement): void {
 }
 
 export function initAll(root: HTMLElement = document.body): void {
-  root.querySelectorAll<HTMLElement>('.idsk-stepper').forEach(init);
+  root.querySelectorAll<HTMLElement>('[data-idsk="stepper"]').forEach(init);
 }
 
 export { initAll as default };
